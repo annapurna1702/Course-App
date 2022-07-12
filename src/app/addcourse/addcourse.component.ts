@@ -12,4 +12,11 @@ export class AddcourseComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
+  
+
+
+  
+
 }
