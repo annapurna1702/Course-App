@@ -1,33 +1,39 @@
+<app-navbar></app-navbar>
 <div class="container">
     <h2 style="color:darkorange">Add a Course</h2>
     <div class="row">
+        <form #addcourse="ngForm" (ngSubmit)="Addcourse()">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3">
+                
+
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label style="color:darkorange" for="" class="form-label">Course Title:</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" [(ngModel)]="course.courseTitle" name="courseTitle" n>
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label style="color:darkorange"for="" class="form-label">Duration:</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" [(ngModel)]="course.courseDuration" name="courseDuration">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label style="color:darkorange" for="" class="form-label">Description:</label>
-                    <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" class="form-control" [(ngModel)]="course.courseDescription" name="courseDescription"></textarea>
 
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label style="color:darkorange"for="" class="form-label">Venue:</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" [(ngModel)]="course.courseVenue" name="courseVenue">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label style="color:darkorange"for="" class="form-label">Date:</label>
-                    <input type="date" name="" id="" class="form-control">
+                    <input type="date" name="" id="" class="form-control" [(ngModel)]="course.courseDate" name="courseDate">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <button class="btn btn-warning">Register</button>
                 </div>
+            
             </div>
         </div>
+    </form>
     </div>
 </div>
